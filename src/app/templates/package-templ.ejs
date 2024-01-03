@@ -1,0 +1,29 @@
+{
+  "name": "<%= projectName %>",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "ts-node --files -r tsconfig-paths/register src/index.ts",
+    "build": "tsc && tsc-alias && node obfuscator.js",
+    "publish-build": "pnpm publish --no-git-checks"
+  },
+  "keywords": [],
+  "author": "<%= author %>",
+  "license": "ISC",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "javascript-obfuscator": "^4.1.0",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ]
+}

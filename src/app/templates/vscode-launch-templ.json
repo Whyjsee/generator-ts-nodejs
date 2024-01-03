@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "ts-node debug",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "sourceMaps": true,
+      "runtimeArgs": [
+        "-r",
+        "ts-node/register"
+      ],
+      "args": [
+        "-r",
+        "tsconfig-paths/register"
+      ],
+      "env": {
+        "TS_NODE_FILES": "true",
+        "TS_NODE_PROJECT": "${workspaceRoot}/tsconfig.json"
+      },
+      "program": "${workspaceFolder}/src/index.ts",
+      "internalConsoleOptions": "openOnSessionStart"
+    }
+  ]
+}

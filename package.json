@@ -1,0 +1,30 @@
+{
+  "name": "generator-ts-nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generator/app/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "ts-node --files -r tsconfig-paths/register generators/app/index.ts",
+    "copy-templ": "copyfiles -a --up 1 'src/**/templates/**' generators",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "yo-test": "tsc && yo yo-test",
+    "build": "tsc && npm run copy-templ"
+  },
+  "files": [
+    "generators/app",
+    "generators/router"
+  ],
+  "author": "yiuyiuyiu",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.9.0",
+    "copyfiles": "^2.4.1",
+    "nodemon": "^3.0.1",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^7.1.1"
+  }
+}
